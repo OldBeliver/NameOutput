@@ -7,7 +7,7 @@ namespace NameOutput
         static void Main(string[] args)
         {
             string name;
-            string line = "";
+            string symbolsLine = "";
             
             char symbol;
             string symbolVariants = "@ # $ % ^ & * | /";          
@@ -23,12 +23,12 @@ namespace NameOutput
 
             for (int i = 0; i < name.Length; i++)
             {
-                line += symbol;
+                symbolsLine += symbol;
             }
 
-            Console.WriteLine(line);
+            Console.WriteLine(symbolsLine);
             Console.WriteLine(name);
-            Console.WriteLine(line);
+            Console.WriteLine(symbolsLine);
         }
     }
 }
