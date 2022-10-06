@@ -8,13 +8,9 @@ namespace NameOutput
         {
             string name;
             string line = "";
-            string symbolVariants = "@ # $ % ^ & * | /";
-
+            
             char symbol;
-
-            int lengthLine;
-            int additionalOffset = 4;
-
+            string symbolVariants = "@ # $ % ^ & * | /";          
 
             Console.WriteLine($"Сегодня на доске почета лучших учеников яЮниор появится Ваше имя.");
             Console.WriteLine($"Введите свое имя:");
@@ -23,15 +19,15 @@ namespace NameOutput
             Console.WriteLine($"Введите один символ для рамочки, например: {symbolVariants}");
             symbol = Convert.ToChar(Console.Read());
 
-            lengthLine = name.Length + additionalOffset;
+            name = symbol + name + symbol;
 
-            for (int i = 0; i < lengthLine; i++)
+            for (int i = 0; i < name.Length; i++)
             {
                 line += symbol;
             }
 
             Console.WriteLine(line);
-            Console.WriteLine($"{symbol} {name} {symbol}");
+            Console.WriteLine(name);
             Console.WriteLine(line);
         }
     }
