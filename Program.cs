@@ -7,6 +7,7 @@ namespace NameOutput
         static void Main(string[] args)
         {
             string name;
+            string referenceLine = "";
             string symbolsLine = "";
             
             char symbol;
@@ -19,15 +20,15 @@ namespace NameOutput
             Console.WriteLine($"Введите один символ для рамочки, например: {symbolVariants}");
             symbol = Convert.ToChar(Console.Read());
 
-            name = symbol + name + symbol;
+            referenceLine = $"{symbol} {name} {symbol}";
 
-            for (int i = 0; i < name.Length; i++)
+            for (int i = 0; i < referenceLine.Length; i++)
             {
                 symbolsLine += symbol;
             }
 
             Console.WriteLine(symbolsLine);
-            Console.WriteLine(name);
+            Console.WriteLine(referenceLine);
             Console.WriteLine(symbolsLine);
         }
     }
